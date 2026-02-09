@@ -3061,13 +3061,22 @@ Ponovimo znanje
 1. Flask znanje:
    
 ```python
-# Osnovni primer Flask aplikacije
 from flask import Flask, render_template
+import requests
+
 app = Flask(__name__)
 
 @app.route('/')
 def domov():
-    return render_template('index.html', podatek="vrednost")
+    # MealDB API klic
+    response = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
+    meal = response.json()['meals'][0]
+
+    return render_template(
+        'index.html',
+        podatek="vrednost",
+        meal=meal
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
