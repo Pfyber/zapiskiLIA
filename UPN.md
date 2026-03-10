@@ -3461,7 +3461,8 @@ Geolokacija IP je proces določanja geografske lokacije naprave, povezane na int
 2.  Pridobite njegovo geografsko lokacijo
 3.  Prikažete vremenske podatke za to lokacijo
 4.  Shranite podatke o obisku v TinyDB
-5. Prikaz vseh obiskov na /obiskovalci routu
+5.  Prikaži sliko države IP-ja
+6. Prikaz vseh obiskov na /obiskovalci routu
 
 
 
